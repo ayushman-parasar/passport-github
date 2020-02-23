@@ -50,7 +50,7 @@ passport.serializeUser((createdUser, done) => {
 passport.deserializeUser((id, done) => {
     User.findById(id, (err, item) => {
       if (err) return done(err)
-      done(null, item) //It means req.user = item it creates a key in req and assigns item to user
+      done(null, item) //It means req.user = item, it creates a key in req and assigns item to user
     })
 })
 
